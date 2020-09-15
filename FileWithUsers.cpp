@@ -8,7 +8,6 @@ void FileWithUsers::addUserToFile(User user)
     {
         xmlFile.AddElem("Users");
         xmlFile.IntoElem();
-        //cout << "File was created!" << endl;
     }
     xmlFile.FindElem();
     xmlFile.IntoElem();
@@ -19,7 +18,7 @@ void FileWithUsers::addUserToFile(User user)
     xmlFile.AddElem("second name", user.getSecondName());
     xmlFile.AddElem("login", user.getLogin());
     xmlFile.AddElem("password", user.getPassword());
-    xmlFile.Save("G:\\kod c++\\personalBudgetApp\\users.xml");
+    xmlFile.Save(FILE_PATH);
 }
 
 vector<User> FileWithUsers::loadUsersFromFile()
@@ -38,7 +37,6 @@ vector<User> FileWithUsers::loadUsersFromFile()
 
     while(xmlFile.FindElem("User"))
     {
-        //cout << "iteracja" << endl;
         User user;
         xmlFile.IntoElem();
         xmlFile.FindElem("ID");
@@ -83,7 +81,7 @@ void FileWithUsers::changeUserPasswordInFile(string newPassword, int loggedUserI
                  xmlFile.FindElem("password");
                  xmlFile.RemoveElem();
                  xmlFile.AddElem("password", newPassword);
-                 xmlFile.Save("G:\\kod c++\\personalBudgetApp\\users.xml");
+                 xmlFile.Save(FILE_PATH);
                  return;
              }
      }
