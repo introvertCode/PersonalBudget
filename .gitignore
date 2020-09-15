@@ -5,3 +5,4 @@ plan/
 *.cbp
 *.xml
 PersonalBudget.cbp
+*.layout
