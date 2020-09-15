@@ -1,0 +1,7 @@
+bin/
+obj/
+plan/
+*.txt
+*.cbp
+*.xml
+PersonalBudget.cbp
