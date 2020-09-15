@@ -6,3 +6,4 @@ plan/
 *.xml
 PersonalBudget.cbp
 *.layout
+*.depend
